@@ -1,0 +1,99 @@
+/* Reset and basic setup */
+* {
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body, html {
+    height: 100%;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url('abc.png') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Dark overlay */
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    top: 0;
+    left: 0;
+}
+
+/* Content inside */
+.content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Logo */
+.logo {
+    width: 300px;
+    margin-bottom: 20px;
+    animation: slideIn 1.5s ease-in-out;
+}
+
+/* Main Heading */
+.animated-text {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    animation: fadeInUp 2s ease forwards;
+}
+
+/* Subtext */
+.subtext {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    animation: fadeInUp 2.5s ease forwards;
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #ffffff;
+    color: #6a0dad;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    animation: fadeInUp 3s ease forwards;
+}
+
+.btn:hover {
+    background-color: #6a0dad;
+    color: #ffffff;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes slideIn {
+    0% { transform: translateY(-100px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    0% { transform: translateY(30px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
